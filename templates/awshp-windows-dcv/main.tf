@@ -207,7 +207,7 @@ resource "aws_ec2_instance_state" "dev" {
 
 module "dcv" {
   source   = "registry.coder.com/modules/amazon-dcv-windows/coder"
-  version  = "1.0.24"
+  version  = "1.1.1"
   count      = data.coder_workspace.me.start_count
   agent_id   = resource.coder_agent.dev[count.index].id
   subdomain  = false
