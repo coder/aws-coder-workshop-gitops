@@ -99,3 +99,24 @@ resource "coderd_template" "awshp-windows-dcv" {
     name = var.coder_gitsha
   }]
 }
+
+resource "coderd_template" "awshp-k8s-rag-with-claude-code" {
+  name        = "awshp-k8s-rag-with-claude-code"
+  display_name = "AWS Workshop Kubernetes AWS RAG Prototyping with Claude Code"
+  description = "Provision Kubernetes Deployments as Coder workspaces with Anthropic Claude Code for AWS RAG prototyping."
+  icon = "/icon/k8s.png"
+  versions = [{
+    directory = "./awshp-k8s-rag-with-claude-code"
+    active    = true
+    # Version name is optional
+    name = var.coder_gitsha
+    tf_vars = [{
+      name  = "namespace"
+      value = "coder"
+    },
+    {
+      name  = "eks_cluster_name"
+      value = "coder-aws-cluster"
+    }]
+  }]
+}
