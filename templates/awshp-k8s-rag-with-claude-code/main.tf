@@ -54,8 +54,8 @@ data "coder_parameter" "memory" {
     value = "4"
   }
   option {
-    name  = "6 GB"
-    value = "6"
+    name  = "8 GB"
+    value = "8"
   }
 }
 
