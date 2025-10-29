@@ -17,13 +17,13 @@ RUN sudo curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "aws
 && sudo unzip awscliv2.zip \
 && sudo ./aws/install && sudo rm awscliv2.zip
 
-#Install Helm
-RUN sudo curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 \
-&& sudo chmod 700 get_helm.sh \
-&& sudo ./get_helm.sh
+#Install Helm - uncomment if desired
+#RUN sudo curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 \
+#&& sudo chmod 700 get_helm.sh \
+#&& sudo ./get_helm.sh
 
-# Install kubectl
-RUN sudo curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl" \
-&& sudo chmod +x kubectl \
-&& sudo mv kubectl /usr/local/bin/
+# Install kubectl - uncomment if desired
+#RUN sudo curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl" \
+#&& sudo chmod +x kubectl \
+#&& sudo mv kubectl /usr/local/bin/
 
