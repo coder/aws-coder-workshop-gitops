@@ -36,11 +36,12 @@ coder login $CODER_AGENT_URL
 ```
 
 ## [Coder Templates](templates/README.md)
-Four specialized workspace templates for AWS development:
+Five specialized workspace templates for AWS development:
 - **Linux Q Developer**: AI-powered development with Amazon Q Developer CLI
 - **Linux SAM**: Serverless development with AWS SAM CLI on ARM64
 - **Windows DCV**: Windows development with NICE DCV remote desktop
 - **Kubernetes with Claude Code**: Cloud-native development with AI task automation
+- **RAG with Claude Code**: RAG application prototyping with vector database
 
 ## Workshop Content
 
