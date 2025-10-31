@@ -28,16 +28,22 @@ This directory contains Coder workspace templates designed for AWS development w
 **Key Tools**: Claude Code AI assistant, VS Code, Cursor, container tools  
 **Best For**: Microservices, container orchestration, AI-driven task automation
 
+### 🤖 [RAG with Claude Code](awshp-k8s-rag-with-claude-code/)
+**Purpose**: RAG application prototyping with vector database  
+**Architecture**: Kubernetes pods with Aurora PostgreSQL Serverless v2  
+**Key Tools**: Claude Code, pgvector, AWS Bedrock, Streamlit, Python tooling  
+**Best For**: AI/ML applications, vector search, RAG prototyping, data science
+
 ## Template Comparison
 
-| Feature | Linux Q Developer | Linux SAM | Windows DCV | K8s Claude Code |
-|---------|------------------|-----------|-------------|-----------------|
-| **Platform** | Ubuntu x86_64 | Ubuntu ARM64 | Windows Server | Kubernetes |
-| **AI Assistant** | Q Developer CLI | Q Developer Extension | - | Claude Code |
-| **Primary Use** | General AWS Dev | Serverless | Windows Dev | Container Dev |
-| **Cost Efficiency** | Standard | High (ARM64) | Higher | Variable |
-| **Persistence** | Full VM | Full VM | Full VM | Home directory |
-| **Startup Time** | ~2-3 min | ~2-3 min | ~5-10 min | ~30-60 sec |
+| Feature | Linux Q Developer | Linux SAM | Windows DCV | K8s Claude Code | RAG Claude Code |
+|---------|------------------|-----------|-------------|-----------------|-----------------|
+| **Platform** | Ubuntu x86_64 | Ubuntu ARM64 | Windows Server | Kubernetes | Kubernetes |
+| **AI Assistant** | Q Developer CLI | Q Developer Extension | - | Claude Code | Claude Code |
+| **Primary Use** | General AWS Dev | Serverless | Windows Dev | Container Dev | RAG/AI Dev |
+| **Cost Efficiency** | Standard | High (ARM64) | Higher | Variable | Variable |
+| **Persistence** | Full VM | Full VM | Full VM | Home directory | Home directory |
+| **Startup Time** | ~2-3 min | ~2-3 min | ~5-10 min | ~30-60 sec | ~5-10 min |
 
 ## Getting Started
 
@@ -72,6 +78,12 @@ This directory contains Coder workspace templates designed for AWS development w
 - Microservices architecture
 - Fast workspace startup times
 
+**Choose RAG Claude Code if you want:**
+- RAG application development
+- Vector database integration
+- AI/ML prototyping with Bedrock
+- Streamlit-based data applications
+
 ## Configuration
 
 ### IAM Instance Profile
@@ -83,12 +95,14 @@ All templates support multi-region deployment with region-specific optimizations
 - **Linux SAM**: 4 US regions (ARM64 availability)
 - **Windows DCV**: 15 regions globally
 - **Kubernetes**: Depends on cluster location
+- **RAG**: Depends on cluster location + Aurora availability
 
 ### Resource Sizing
 Each template offers configurable resource options:
-- **CPU**: 1-4 vCPUs depending on template
+- **CPU**: 1-8 vCPUs depending on template
 - **Memory**: 1-16 GiB RAM options
 - **Storage**: 10-300 GB persistent volumes
+- **Database**: Aurora Serverless v2 (0.5-1.0 ACU for RAG template)
 
 ## Workshop Integration
 
