@@ -1,0 +1,12 @@
+terraform {
+  required_providers {
+    coder = {
+      source  = "coder/coder"
+      version = "2.15.0"
+    }
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "3.1.0"
+    }
+  }
+}
